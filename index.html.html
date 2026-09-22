@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaddi Man - Developed by Auza | Official Website & Game Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        .font-pixel { font-family: 'Press Start 2P', cursive; }
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        canvas { background-color: #1e1b4b; display: block; border-radius: 0.75rem; touch-action: none; }
+        .pixel-border {
+            border: 4px solid #f59e0b;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-slate-950 text-slate-100">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center font-pixel text-slate-950 font-bold text-xl shadow-lg shadow-amber-500/30">
+                    🩲
+                </div>
+                <div>
+                    <h1 class="font-pixel text-lg text-amber-400 tracking-wider">CHADDI MAN</h1>
+                    <p class="text-xs text-slate-400 font-semibold">Dev: <span class="text-amber-300">Auza</span> (auza boy op)</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button onclick="openGameModal()" class="font-pixel text-xs bg-amber-500 hover:bg-amber-400 text-slate-950 px-4 py-2.5 rounded-lg font-bold transition transform hover:scale-105 shadow-lg shadow-amber-500/20">
+                    ▶ PLAY ONLINE
+                </button>
+                <button onclick="downloadGameFile()" class="font-pixel text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 rounded-lg font-bold transition transform hover:scale-105 shadow-lg shadow-indigo-600/20">
+                    ⬇ DOWNLOAD (.HTML)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Website Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full space-y-12">
+        
+        <!-- Hero Showcase -->
+        <section class="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-10 relative overflow-hidden text-center sm:text-left flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="space-y-4 max-w-xl z-10">
+                <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 font-pixel text-xs px-3 py-1 rounded-full inline-block">
+                    ★ OFFICIAL RELEASE
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+                    Save the World as <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">Chaddi Man</span>!
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Battle through 3 dangerous worlds created by developer <strong class="text-amber-300">Auza</strong>! Defeat slime goombas in Grasslands, leap over magma in Lava Caves, and crush the giant boss in the Citadel!
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2 justify-center sm:justify-start">
+                    <button onclick="openGameModal()" class="font-pixel text-xs bg-amber-500 hover:bg-amber-400 text-slate-950 px-6 py-3.5 rounded-xl font-bold shadow-lg shadow-amber-500/30 transition transform hover:-translate-y-0.5">
+                        ▶ PLAY IN BROWSER
+                    </button>
+                    <button onclick="downloadGameFile()" class="font-pixel text-xs bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 px-6 py-3.5 rounded-xl font-bold transition transform hover:-translate-y-0.5">
+                        💾 DOWNLOAD GAME FILE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Illustration Box -->
+            <div class="w-full max-w-xs bg-slate-900/90 border-2 border-amber-500/50 rounded-2xl p-6 text-center space-y-4 shadow-2xl relative">
+                <div class="text-6xl animate-bounce">🩲</div>
+                <div class="font-pixel text-sm text-amber-400">CHADDI MAN</div>
+                <div class="text-xs text-slate-400 space-y-1">
+                    <p>✔ 3 Epic Campaign Levels</p>
+                    <p>✔ Persistent Checkpoints</p>
+                    <p>✔ Giant Boss Fight</p>
+                    <p>✔ Touch & Keyboard Controls</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Highlights -->
+        <section class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-xl space-y-2">
+                <div class="text-3xl">🌱</div>
+                <h3 class="font-pixel text-sm text-amber-400">LEVEL 1: GRASSLANDS</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Master jump mechanics, dodge green slime monsters, collect gold coins, and activate your first checkpoint flag!</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-xl space-y-2">
+                <div class="text-3xl">🔥</div>
+                <h3 class="font-pixel text-sm text-amber-400">LEVEL 2: LAVA CAVES</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Cross floating magma platforms! Don't fall into the burning lava below as precision jumping is strictly tested.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-xl space-y-2">
+                <div class="text-3xl">🏰</div>
+                <h3 class="font-pixel text-sm text-amber-400">LEVEL 3: CITADEL BOSS</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Face the giant Citadel Boss! Avoid his deadly fireballs and land 5 jump attacks on his head to win!</p>
+            </div>
+        </section>
+
+        <!-- Game Controls Reference -->
+        <section class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+                <h3 class="font-pixel text-sm text-amber-400 mb-2">🎮 GAME CONTROLS</h3>
+                <p class="text-xs text-slate-300">Desktop: <span class="bg-slate-800 px-2 py-1 rounded text-amber-300">A / D</span> or <span class="bg-slate-800 px-2 py-1 rounded text-amber-300">Arrow Keys</span> to Move | <span class="bg-slate-800 px-2 py-1 rounded text-amber-300">W / Space / Up Arrow</span> to Jump</p>
+                <p class="text-xs text-slate-400 mt-1">Mobile / Tablet: Use on-screen touch buttons automatically generated during gameplay.</p>
+            </div>
+            <button onclick="openGameModal()" class="font-pixel text-xs bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-3 rounded-lg font-bold shrink-0">
+                LAUNCH GAME NOW
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500 space-y-2">
+        <p>Chaddi Man Game & Website Created by <strong class="text-amber-400">Auza</strong> (auza boy op)</p>
+        <p class="text-slate-600">Hosted on GitHub Pages • All Rights Reserved</p>
+    </footer>
+
+    <!-- Game Modal Container -->
+    <div id="gameModal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 flex items-center justify-center p-2 sm:p-4 hidden">
+        <div class="bg-slate-900 border-2 border-amber-500/60 rounded-2xl p-4 max-w-4xl w-full flex flex-col items-center space-y-3 shadow-2xl relative">
+            
+            <!-- Modal Top Bar -->
+            <div class="w-full flex items-center justify-between border-b border-slate-800 pb-2">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl">🩲</span>
+                    <span class="font-pixel text-xs text-amber-400">CHADDI MAN - PLAYING LIVE</span>
+                </div>
+                <button onclick="closeGameModal()" class="font-pixel text-xs bg-red-600 hover:bg-red-500 text-white px-3 py-1.5 rounded-md font-bold">
+                    ✕ Close Game
+                </button>
+            </div>
+
+            <!-- Canvas Container -->
+            <div class="w-full relative flex flex-col items-center justify-center overflow-hidden">
+                <canvas id="gameCanvas" width="800" height="450" class="w-full max-w-full h-auto border border-slate-700"></canvas>
+
+                <!-- Touch Controls Overlay for Mobile -->
+                <div class="w-full flex justify-between items-center mt-3 px-2 sm:hidden text-white font-pixel text-xs">
+                    <div class="flex space-x-2">
+                        <button id="btnLeft" class="bg-slate-800 border border-slate-600 active:bg-amber-500 active:text-slate-950 w-12 h-12 rounded-xl flex items-center justify-center text-lg select-none">◀</button>
+                        <button id="btnRight" class="bg-slate-800 border border-slate-600 active:bg-amber-500 active:text-slate-950 w-12 h-12 rounded-xl flex items-center justify-center text-lg select-none">▶</button>
+                    </div>
+                    <button id="btnJump" class="bg-amber-500 text-slate-950 active:bg-amber-400 w-16 h-12 rounded-xl flex items-center justify-center font-bold text-sm select-none shadow-lg shadow-amber-500/30">JUMP</button>
+                </div>
+            </div>
+
+            <div class="text-xs text-slate-400 text-center font-mono">
+                Press <span class="text-amber-400">W/Up</span> to Jump, <span class="text-amber-400">A/D/Left/Right</span> to Move. Touch controls active on mobile.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ----------------------------------------------------
+           CHADDI MAN GAME ENGINE - DEVELOPED BY AUZA
+           ---------------------------------------------------- */
+        
+        let canvas = document.getElementById('gameCanvas');
+        let ctx = canvas.getContext('2d');
+
+        // Input Handling State
+        const keys = { left: false, right: false, up: false };
+
+        window.addEventListener('keydown', (e) => {
+            if (['ArrowLeft', 'a', 'A'].includes(e.key)) keys.left = true;
+            if (['ArrowRight', 'd', 'D'].includes(e.key)) keys.right = true;
+            if (['ArrowUp', 'w', 'W', ' '].includes(e.key)) {
+                if (!keys.up) triggerJump();
+                keys.up = true;
+            }
+        });
+
+        window.addEventListener('keyup', (e) => {
+            if (['ArrowLeft', 'a', 'A'].includes(e.key)) keys.left = false;
+            if (['ArrowRight', 'd', 'D'].includes(e.key)) keys.right = false;
+            if (['ArrowUp', 'w', 'W', ' '].includes(e.key)) keys.up = false;
+        });
+
+        // Touch Control Listeners
+        const setupTouch = (id, keyName) => {
+            const btn = document.getElementById(id);
+            if (!btn) return;
+            btn.addEventListener('touchstart', (e) => { e.preventDefault(); if (keyName === 'up') triggerJump(); keys[keyName] = true; });
+            btn.addEventListener('touchend', (e) => { e.preventDefault(); keys[keyName] = false; });
+        };
+        setupTouch('btnLeft', 'left');
+        setupTouch('btnRight', 'right');
+        setupTouch('btnJump', 'up');
+
+        function triggerJump() {
+            if (player.grounded) {
+                player.vy = player.jumpForce;
+                player.grounded = false;
+            }
+        }
+
+        // Game State Variables
+        let gameState = 'START'; // 'START', 'PLAYING', 'LEVEL_CLEAR', 'GAME_OVER', 'VICTORY'
+        let currentLevel = 1;
+        let lives = 3;
+        let score = 0;
+        let animationFrameId = null;
+
+        // Player Definition
+        const player = {
+            x: 50,
+            y: 300,
+            width: 32,
+            height: 48,
+            vx: 0,
+            vy: 0,
+            speed: 4.5,
+            jumpForce: -10.5,
+            gravity: 0.5,
+            grounded: false,
+            facing: 'right',
+            checkpointX: 50,
+            checkpointY: 300,
+            invulnerable: 0
+        };
+
+        // Level Definitions
+        let platforms = [];
+        let coins = [];
+        let enemies = [];
+        let checkpoint = null;
+        let boss = null;
+        let bossFireballs = [];
+
+        function loadLevel(lvl) {
+            currentLevel = lvl;
+            platforms = [];
+            coins = [];
+            enemies = [];
+            bossFireballs = [];
+            boss = null;
+
+            if (lvl === 1) {
+                // Grasslands
+                player.x = 50; player.y = 300;
+                player.checkpointX = 50; player.checkpointY = 300;
+
+                // Base floor
+                platforms.push({ x: 0, y: 400, width: 800, height: 50, type: 'grass' });
+                // Raised ledges
+                platforms.push({ x: 150, y: 310, width: 120, height: 20, type: 'grass' });
+                platforms.push({ x: 330, y: 240, width: 140, height: 20, type: 'grass' });
+                platforms.push({ x: 530, y: 180, width: 120, height: 20, type: 'grass' });
+                platforms.push({ x: 680, y: 290, width: 100, height: 20, type: 'grass' });
+
+                // Coins
+                coins = [
+                    { x: 180, y: 270, collected: false },
+                    { x: 220, y: 270, collected: false },
+                    { x: 370, y: 200, collected: false },
+                    { x: 400, y: 200, collected: false },
+                    { x: 570, y: 140, collected: false },
+                    { x: 710, y: 250, collected: false }
+                ];
+
+                // Enemies (Slime/Goombas)
+                enemies = [
+                    { x: 200, y: 376, width: 24, height: 24, vx: -1.2, minX: 100, maxX: 400, alive: true },
+                    { x: 360, y: 216, width: 24, height: 24, vx: 1.0, minX: 330, maxX: 450, alive: true }
+                ];
+
+                // Checkpoint Flag
+                checkpoint = { x: 720, y: 230, width: 20, height: 60, activated: false };
+
+            } else if (lvl === 2) {
+                // Lava Caves
+                player.x = 40; player.y = 200;
+                player.checkpointX = 40; player.checkpointY = 200;
+
+                // Lava Floor (Deadly)
+                platforms.push({ x: 0, y: 430, width: 800, height: 20, type: 'lava' });
+
+                // Floating Rock Ledges
+                platforms.push({ x: 0, y: 320, width: 120, height: 20, type: 'rock' });
+                platforms.push({ x: 180, y: 280, width: 100, height: 20, type: 'rock' });
+                platforms.push({ x: 340, y: 220, width: 110, height: 20, type: 'rock' });
+                platforms.push({ x: 500, y: 280, width: 100, height: 20, type: 'rock' });
+                platforms.push({ x: 660, y: 220, width: 110, height: 20, type: 'rock' });
+
+                coins = [
+                    { x: 210, y: 240, collected: false },
+                    { x: 370, y: 180, collected: false },
+                    { x: 530, y: 240, collected: false },
+                    { x: 700, y: 180, collected: false }
+                ];
+
+                enemies = [
+                    { x: 190, y: 256, width: 24, height: 24, vx: 1.5, minX: 180, maxX: 260, alive: true },
+                    { x: 510, y: 256, width: 24, height: 24, vx: -1.5, minX: 500, maxX: 580, alive: true }
+                ];
+
+                checkpoint = { x: 710, y: 160, width: 20, height: 60, activated: false };
+
+            } else if (lvl === 3) {
+                // Dark Citadel Boss Level
+                player.x = 50; player.y = 300;
+                player.checkpointX = 50; player.checkpointY = 300;
+
+                // Castle Floor & Pillars
+                platforms.push({ x: 0, y: 380, width: 800, height: 70, type: 'stone' });
+                platforms.push({ x: 150, y: 270, width: 120, height: 20, type: 'stone' });
+                platforms.push({ x: 530, y: 270, width: 120, height: 20, type: 'stone' });
+
+                // Boss
+                boss = {
+                    x: 650,
+                    y: 260,
+                    width: 70,
+                    height: 120,
+                    hp: 5,
+                    maxHp: 5,
+                    shootTimer: 0,
+                    alive: true,
+                    direction: -1
+                };
+
+                checkpoint = { x: 750, y: 320, width: 20, height: 60, activated: false };
+            }
+        }
+
+        function drawChaddiMan(p) {
+            ctx.save();
+            ctx.translate(p.x + p.width / 2, p.y + p.height / 2);
+            if (p.facing === 'left') ctx.scale(-1, 1);
+
+            // Flash effect if invulnerable
+            if (p.invulnerable > 0 && Math.floor(Date.now() / 100) % 2 === 0) {
+                ctx.globalAlpha = 0.5;
+            }
+
+            // 1. Flowing Red Cape
+            ctx.fillStyle = '#dc2626';
+            ctx.beginPath();
+            ctx.moveTo(-6, -10);
+            ctx.lineTo(-20 + (Math.sin(Date.now() / 150) * 4), 16);
+            ctx.lineTo(-8, 20);
+            ctx.lineTo(0, -5);
+            ctx.closePath();
+            ctx.fill();
+
+            // 2. Yellow Body / Tights
+            ctx.fillStyle = '#facc15';
+            ctx.fillRect(-10, -12, 20, 36);
+
+            // 3. Signature Red Chaddi (Underwear)
+            ctx.fillStyle = '#ef4444';
+            ctx.beginPath();
+            ctx.moveTo(-11, 8);
+            ctx.lineTo(11, 8);
+            ctx.lineTo(7, 22);
+            ctx.lineTo(-7, 22);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#b91c1c';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            // 4. Heroic Belt & Buckle
+            ctx.fillStyle = '#1e293b';
+            ctx.fillRect(-10, 5, 20, 4);
+            ctx.fillStyle = '#f59e0b';
+            ctx.fillRect(-3, 4, 6, 6);
+
+            // 5. Hero Head & Red Mask
+            ctx.fillStyle = '#fde047'; // Head
+            ctx.beginPath();
+            ctx.arc(0, -16, 11, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Red Hero Mask
+            ctx.fillStyle = '#dc2626';
+            ctx.fillRect(-9, -20, 18, 8);
+
+            // Eyes
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(2, -19, 4, 4);
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(4, -18, 2, 2);
+
+            // Chest Emblem 'C'
+            ctx.fillStyle = '#dc2626';
+            ctx.font = 'bold 9px Arial';
+            ctx.fillText('C', -3, -1);
+
+            ctx.restore();
+        }
+
+        function updatePhysics() {
+            if (gameState !== 'PLAYING') return;
+
+            // Invulnerability cooldown
+            if (player.invulnerable > 0) player.invulnerable--;
+
+            // Horizontal Movement
+            if (keys.left) {
+                player.vx = -player.speed;
+                player.facing = 'left';
+            } else if (keys.right) {
+                player.vx = player.speed;
+                player.facing = 'right';
+            } else {
+                player.vx = 0;
+            }
+
+            // Apply Gravity
+            player.vy += player.gravity;
+
+            // Update Position
+            player.x += player.vx;
+            player.y += player.vy;
+
+            // Boundary Checks
+            if (player.x < 0) player.x = 0;
+            if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+
+            // Platform Collision
+            player.grounded = false;
+            platforms.forEach(plat => {
+                if (player.x < plat.x + plat.width &&
+                    player.x + player.width > plat.x &&
+                    player.y + player.height >= plat.y &&
+                    player.y + player.height <= plat.y + 15 &&
+                    player.vy >= 0) {
+                    
+                    if (plat.type === 'lava') {
+                        takeDamage();
+                    } else {
+                        player.grounded = true;
+                        player.vy = 0;
+                        player.y = plat.y - player.height;
+                    }
+                }
+            });
+
+            // Pitfall Death (Falling below screen)
+            if (player.y > canvas.height + 50) {
+                takeDamage();
+            }
+
+            // Coins Collection
+            coins.forEach(c => {
+                if (!c.collected &&
+                    player.x < c.x + 16 && player.x + player.width > c.x &&
+                    player.y < c.y + 16 && player.y + player.height > c.y) {
+                    c.collected = true;
+                    score += 100;
+                }
+            });
+
+            // Enemy Logic & Stomping
+            enemies.forEach(e => {
+                if (!e.alive) return;
+                e.x += e.vx;
+                if (e.x <= e.minX || e.x + e.width >= e.maxX) e.vx *= -1;
+
+                // Player Stomp or Hit
+                if (player.x < e.x + e.width && player.x + player.width > e.x &&
+                    player.y < e.y + e.height && player.y + player.height > e.y) {
+                    
+                    // Stomp enemy if landing on top
+                    if (player.vy > 0 && player.y + player.height - player.vy <= e.y + 10) {
+                        e.alive = false;
+                        player.vy = player.jumpForce * 0.7;
+                        score += 250;
+                    } else {
+                        takeDamage();
+                    }
+                }
+            });
+
+            // Boss Encounter Logic (Level 3)
+            if (boss && boss.alive) {
+                boss.shootTimer++;
+                if (boss.shootTimer > 90) {
+                    boss.shootTimer = 0;
+                    bossFireballs.push({
+                        x: boss.x - 10,
+                        y: boss.y + 30,
+                        vx: -4,
+                        vy: (Math.random() - 0.5) * 2
+                    });
+                }
+
+                // Fireball movement and player hit
+                bossFireballs.forEach((f, index) => {
+                    f.x += f.vx;
+                    f.y += f.vy;
+                    if (player.x < f.x + 12 && player.x + player.width > f.x &&
+                        player.y < f.y + 12 && player.y + player.height > f.y) {
+                        takeDamage();
+                        bossFireballs.splice(index, 1);
+                    }
+                });
+
+                // Jump on Boss to Damage
+                if (player.x < boss.x + boss.width && player.x + player.width > boss.x &&
+                    player.y < boss.y + boss.height && player.y + player.height > boss.y) {
+                    
+                    if (player.vy > 0 && player.y + player.height - player.vy <= boss.y + 20) {
+                        boss.hp--;
+                        player.vy = player.jumpForce;
+                        score += 500;
+                        if (boss.hp <= 0) {
+                            boss.alive = false;
+                            score += 2000;
+                            gameState = 'VICTORY';
+                        }
+                    } else {
+                        takeDamage();
+                    }
+                }
+            }
+
+            // Checkpoint Flag Flag Activation & Level Progression
+            if (checkpoint &&
+                player.x < checkpoint.x + checkpoint.width &&
+                player.x + player.width > checkpoint.x &&
+                player.y < checkpoint.y + checkpoint.height &&
+                player.y + player.height > checkpoint.y) {
+                
+                if (currentLevel < 3) {
+                    gameState = 'LEVEL_CLEAR';
+                } else if (!boss || !boss.alive) {
+                    gameState = 'VICTORY';
+                }
+            }
+        }
+
+        function takeDamage() {
+            if (player.invulnerable > 0) return;
+            lives--;
+            player.invulnerable = 60; // 1 second invincibility frames
+
+            if (lives <= 0) {
+                gameState = 'GAME_OVER';
+            } else {
+                // Respawn at Checkpoint
+                player.x = player.checkpointX;
+                player.y = player.checkpointY;
+                player.vx = 0;
+                player.vy = 0;
+            }
+        }
+
+        function render() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 1. Background Environment
+            if (currentLevel === 1) {
+                ctx.fillStyle = '#1e1b4b'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+                // Sun / Clouds
+                ctx.fillStyle = '#fef08a'; ctx.beginPath(); ctx.arc(700, 70, 35, 0, Math.PI * 2); ctx.fill();
+            } else if (currentLevel === 2) {
+                ctx.fillStyle = '#292524'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+                // Lava glow
+                ctx.fillStyle = 'rgba(239, 68, 68, 0.15)'; ctx.fillRect(0, 350, canvas.width, 100);
+            } else {
+                ctx.fillStyle = '#020617'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            // 2. Platforms
+            platforms.forEach(p => {
+                if (p.type === 'grass') {
+                    ctx.fillStyle = '#22c55e'; ctx.fillRect(p.x, p.y, p.width, 6);
+                    ctx.fillStyle = '#78350f'; ctx.fillRect(p.x, p.y + 6, p.width, p.height - 6);
+                } else if (p.type === 'lava') {
+                    ctx.fillStyle = '#ef4444'; ctx.fillRect(p.x, p.y, p.width, p.height);
+                    ctx.fillStyle = '#f59e0b'; ctx.fillRect(p.x, p.y, p.width, 4);
+                } else if (p.type === 'rock') {
+                    ctx.fillStyle = '#57534e'; ctx.fillRect(p.x, p.y, p.width, p.height);
+                    ctx.fillStyle = '#78716c'; ctx.fillRect(p.x, p.y, p.width, 4);
+                } else { // stone
+                    ctx.fillStyle = '#334155'; ctx.fillRect(p.x, p.y, p.width, p.height);
+                    ctx.fillStyle = '#64748b'; ctx.fillRect(p.x, p.y, p.width, 4);
+                }
+            });
+
+            // 3. Coins
+            coins.forEach(c => {
+                if (!c.collected) {
+                    ctx.fillStyle = '#f59e0b';
+                    ctx.beginPath();
+                    ctx.arc(c.x + 8, c.y + 8, 7, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.fillStyle = '#fef08a';
+                    ctx.beginPath();
+                    ctx.arc(c.x + 6, c.y + 6, 2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            });
+
+            // 4. Enemies
+            enemies.forEach(e => {
+                if (e.alive) {
+                    ctx.fillStyle = '#a855f7';
+                    ctx.beginPath();
+                    ctx.arc(e.x + 12, e.y + 14, 12, Math.PI, 0, false);
+                    ctx.lineTo(e.x + 24, e.y + 24);
+                    ctx.lineTo(e.x, e.y + 24);
+                    ctx.closePath();
+                    ctx.fill();
+                    // Eyes
+                    ctx.fillStyle = '#ffffff'; ctx.fillRect(e.x + 4, e.y + 8, 4, 4); ctx.fillRect(e.x + 14, e.y + 8, 4, 4);
+                    ctx.fillStyle = '#000000'; ctx.fillRect(e.x + 5, e.y + 9, 2, 2); ctx.fillRect(e.x + 15, e.y + 9, 2, 2);
+                }
+            });
+
+            // 5. Boss Render (Level 3)
+            if (boss && boss.alive) {
+                // Boss Body
+                ctx.fillStyle = '#b91c1c'; ctx.fillRect(boss.x, boss.y, boss.width, boss.height);
+                ctx.fillStyle = '#7f1d1d'; ctx.fillRect(boss.x + 5, boss.y + 5, boss.width - 10, boss.height - 10);
+                // Eyes & Crown
+                ctx.fillStyle = '#f59e0b'; ctx.fillRect(boss.x + 15, boss.y + 20, 12, 12); ctx.fillRect(boss.x + 43, boss.y + 20, 12, 12);
+                
+                // Boss Health Bar
+                ctx.fillStyle = '#000000'; ctx.fillRect(boss.x - 5, boss.y - 20, 80, 10);
+                ctx.fillStyle = '#22c55e'; ctx.fillRect(boss.x - 5, boss.y - 20, (boss.hp / boss.maxHp) * 80, 10);
+                ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 1; ctx.strokeRect(boss.x - 5, boss.y - 20, 80, 10);
+
+                // Boss Fireballs
+                ctx.fillStyle = '#f97316';
+                bossFireballs.forEach(f => {
+                    ctx.beginPath(); ctx.arc(f.x, f.y, 8, 0, Math.PI * 2); ctx.fill();
+                });
+            }
+
+            // 6. Checkpoint Flag
+            if (checkpoint) {
+                ctx.fillStyle = '#64748b'; ctx.fillRect(checkpoint.x, checkpoint.y, 4, checkpoint.height);
+                ctx.fillStyle = '#ef4444';
+                ctx.beginPath();
+                ctx.moveTo(checkpoint.x + 4, checkpoint.y);
+                ctx.lineTo(checkpoint.x + 24, checkpoint.y + 12);
+                ctx.lineTo(checkpoint.x + 4, checkpoint.y + 24);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            // 7. Player Character
+            drawChaddiMan(player);
+
+            // 8. HUD Header (Hearts, Level, Score)
+            ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+            ctx.fillRect(10, 10, 780, 35);
+            ctx.strokeStyle = '#334155';
+            ctx.strokeRect(10, 10, 780, 35);
+
+            ctx.font = 'bold 12px "Press Start 2P", monospace';
+            ctx.fillStyle = '#f59e0b';
+            ctx.fillText(`LVL: ${currentLevel}`, 25, 33);
+            ctx.fillText(`SCORE: ${score}`, 160, 33);
+
+            // Hearts Display
+            let heartsStr = '';
+            for (let i = 0; i < lives; i++) heartsStr += '❤️ ';
+            ctx.fillText(`LIVES: ${heartsStr}`, 560, 33);
+
+            // 9. Overlays (Start, Level Clear, Game Over, Victory)
+            if (gameState === 'START') {
+                drawOverlay('CHADDI MAN', 'Developed by Auza', 'Press JUMP or CLICK to Play!');
+            } else if (gameState === 'LEVEL_CLEAR') {
+                drawOverlay('LEVEL COMPLETE!', `Score: ${score}`, 'Click to Enter Next Level');
+            } else if (gameState === 'GAME_OVER') {
+                drawOverlay('GAME OVER', 'Chaddi Man was defeated!', 'Click or Press JUMP to Restart');
+            } else if (gameState === 'VICTORY') {
+                drawOverlay('VICTORY!', 'You defeated the Citadel Boss!', 'Auza Salutes You! Click to Replay');
+            }
+        }
+
+        function drawOverlay(title, subtitle, actionText) {
+            ctx.fillStyle = 'rgba(2, 6, 23, 0.85)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 24px "Press Start 2P", cursive';
+            ctx.fillStyle = '#f59e0b';
+            ctx.fillText(title, canvas.width / 2, 180);
+
+            ctx.font = '14px "Inter", sans-serif';
+            ctx.fillStyle = '#cbd5e1';
+            ctx.fillText(subtitle, canvas.width / 2, 220);
+
+            ctx.font = 'bold 12px "Press Start 2P", cursive';
+            ctx.fillStyle = '#22c55e';
+            ctx.fillText(actionText, canvas.width / 2, 280);
+
+            ctx.textAlign = 'left';
+        }
+
+        function gameLoop() {
+            updatePhysics();
+            render();
+            animationFrameId = requestAnimationFrame(gameLoop);
+        }
+
+        canvas.addEventListener('click', () => {
+            if (gameState === 'START') {
+                score = 0;
+                lives = 3;
+                loadLevel(1);
+                gameState = 'PLAYING';
+            } else if (gameState === 'LEVEL_CLEAR') {
+                loadLevel(currentLevel + 1);
+                gameState = 'PLAYING';
+            } else if (gameState === 'GAME_OVER' || gameState === 'VICTORY') {
+                score = 0;
+                lives = 3;
+                loadLevel(1);
+                gameState = 'PLAYING';
+            }
+        });
+
+        // Modal Controls
+        function openGameModal() {
+            document.getElementById('gameModal').classList.remove('hidden');
+            gameState = 'START';
+            loadLevel(1);
+            if (!animationFrameId) gameLoop();
+        }
+
+        function closeGameModal() {
+            document.getElementById('gameModal').classList.add('hidden');
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+        }
+
+        // Automatic Download Engine
+        function downloadGameFile() {
+            const htmlContent = `<!DOCTYPE html>\n<html>\n${document.documentElement.innerHTML}\n</html>`;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'ChaddiMan_Game_By_Auza.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Start initialization on window load
+        window.onload = function() {
+            loadLevel(1);
+            render();
+        };
+    </script>
+</body>
+</html>
